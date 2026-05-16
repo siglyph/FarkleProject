@@ -1,4 +1,5 @@
 ### GET request to example server
-GET http://localhost:8080
+POST http://localhost:8080/games
 
-###
+### Get a specific game
+GET http://localhost:8080/games/d51ccee3-76f9-40db-8c93-4851053828f

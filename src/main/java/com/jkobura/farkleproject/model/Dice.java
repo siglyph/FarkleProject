@@ -5,7 +5,13 @@ public class Dice {
     private int faceValue;
     private boolean isInCup;
 
-    public void randomizeFaceValue() {}
+    public void randomizeFaceValue() {
+        setFaceValue((int)(Math.random() * 6) + 1);
+    }
+
+    public void setFaceValue(int value){
+        this.faceValue = value;
+    }
 
     public int getFaceValue(){
         return this.faceValue;
