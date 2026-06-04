@@ -3,14 +3,20 @@ import java.util.UUID;
 
 public class Game {
 
-    private final String gameId;
+    private String gameId;
+    private Cup cup = new Cup();
+
+    private List currentRoll = new List<Dice>;
+
+    private List<Dice> table = new ArrayList<>();
 
     public Game(){
-        gameId = UUID.randomUUID().toString();
+        this.gameId = UUID.randomUUID().toString();
     }
 
-    public String getGameId(){
-        return this.gameId;
+    public void rollDice(){
+
     }
+
 
 }

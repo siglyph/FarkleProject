@@ -2,28 +2,38 @@ package com.jkobura.farkleproject.model;
 
 public class Dice {
 
-    private int faceValue;
-    private boolean isInCup;
+    // DICE FIELDS //
 
-    public void randomizeFaceValue() {
-        setFaceValue((int)(Math.random() * 6) + 1);
+    private static final int MAX_FACE_VALUE = 6;
+    private static final int MIN_FACE_VALUE = 1;
+
+    private int faceValue; // Assigned by Cup
+    private int diceNumber;
+
+    public Dice(int diceNumber){
+        this.diceNumber = diceNumber;
     }
 
+    // DICE METHODS //
+
+    // Getter for diceNumber
+    public int getDiceNumber() {
+        return diceNumber;
+    }
+    // Getter for value
+    public int getFaceValue(){
+        return faceValue;
+    }
+    // Setter for value
     public void setFaceValue(int value){
         this.faceValue = value;
     }
 
-    public int getFaceValue(){
-        return this.faceValue;
-    }
-
-    public boolean isInCup(){
-        return this.isInCup;
-    }
-
-    public void setIsInCup(boolean value){
-        this.isInCup = value;
+    // Randomize face value
+    public void randomizeFaceValue(){
+        this.faceValue = (int)(Math.random() * MAX_FACE_VALUE + MIN_FACE_VALUE);
     }
 
 
 }
+
